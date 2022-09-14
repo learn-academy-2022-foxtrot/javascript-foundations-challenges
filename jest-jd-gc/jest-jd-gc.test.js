@@ -135,15 +135,29 @@ const smallerNumber = (num1, num2) => {
 // 5. Write the test for a function that takes in one numbers and returns
 // whether the number is odd.
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("oddNumber", () => {
+  it("returns whether the number is odd.", () => {
+    expect(oddNumber(33)).toEqual("odd");
+    expect(oddNumber(20)).toEqual(null);
+  });
+});
+
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+
+//create functions that will make the test pass
+const oddNumber = (number) => {
+  // if the number is odd
+  if (number % 2 !== 0) {
+    // return "odd"
+    return "odd";
+    // else return null
+  } else {
+    return null;
+  }
+};
 
 //==============================================================================
 //==============================================================================
