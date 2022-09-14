@@ -164,43 +164,70 @@ const oddNumber = (number) => {
 // 6. Write the test for a function that takes in a fruit and returns "yellow"
 // if the argument is banana, "red" if apple and "purple" if grape.
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("fruitColor", () => {
+  it("takes in a fruit and returns 'yellow' if the argument is banana, 'red' if apple and 'purple' if grape.", () => {
+    expect(fruitColor("banana")).toEqual("yellow");
+    expect(fruitColor("apple")).toEqual("red");
+    expect(fruitColor("grape")).toEqual("purple");
+  });
+});
+
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+// create the function that will make the test pass
+const fruitColor = (fruit) => {
+  if (fruit === "banana") {
+    return "yellow";
+  } else if (fruit === "apple") {
+    return "red";
+  } else {
+    return "purple";
+  }
+};
 
 //==============================================================================
 //==============================================================================
 // 7. Write the test for a function called `rick` that returns "Morty".
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("rick", () => {
+  it("returns 'Morty'", () => {
+    expect(rick()).toEqual("Morty");
+  });
+});
+
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+
+// create function that will pass test
+const rick = () => {
+  // return "Morty"
+  return "Morty";
+};
 
 //==============================================================================
 // 8. Write the test for a function called `greeter` that takes a name as an
 // argument and returns a greeting with that name to the screen.
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("greeter", () => {
+  it("takes a name as an argument and returns a greeting with that name to the screen.", () => {
+    expect(greeter("Jeremy")).toEqual("Hello Jeremy!");
+    expect(greeter("Goran")).toEqual("Hello Goran!");
+  });
+});
+
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+//   * Create the function that will make the test pass.
+const greeter = (name) => {
+  // return greeting with input name
+  return `Hello ${name}!`;
+};
 
 //==============================================================================
 //==============================================================================
