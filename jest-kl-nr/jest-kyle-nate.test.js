@@ -2,6 +2,11 @@
 // Create the function that will make the test pass.
 
 
+
+
+
+
+
 describe("areTired", () => {
     it("returns 'drink coffee' if you are tired and 'keep working' if you are not tired.", () => {
         expect(areTired("yes")).toEqual("drink coffee")
@@ -103,14 +108,87 @@ const oddNum = (number) => {
         return "even"
     }
 }
+//output: pass
+
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Create the function that will make the test pass.
+
+describe("fruitColor", () => {
+    it("takes in a fruit and returns 'yellow' if the argument is banana, 'red' if apple and 'purple' if grape.", () => {
+        expect(fruitColor("banana")).toEqual("yellow")
+        expect(fruitColor("apple")).toEqual("red")
+        expect(fruitColor("grape")).toEqual("purple")
+    })
+})
+//output: good error: ReferenceError: fruitColor is not defined
+
+const fruitColor = (string) => {
+    if(string === "banana") {
+        return "yellow"
+    } else if(string === "apple") {
+        return "red"
+    } else if(string === "grape") {
+        return "purple"
+    } else {
+        return "error"
+    }
+}
+// Output: pass
+
 // Write the test for a function called rick that returns "Morty".
 // Create the function that will make the test pass.
+
+describe("rickMorty", () => {
+    it("takes a function called rick that returns 'Morty'.", () => {
+        expect(rickMorty("rick")).toEqual("Morty")
+    })
+})
+// output: good error: ReferenceError: rickMorty is not defined
+
+const rickMorty = (string) => {
+    if(string === "rick") {
+        return "Morty"
+    } else {
+        return "error"
+    }
+}
+// output: pass
+
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
 // Create the function that will make the test pass.
+
+describe("greeter", () => {
+    it("takes a name as an argument and returns a greeting with that name to the screen.", () => {
+        expect(greeter("string")).toEqual(`"Hello ${greeter}"`)
+    })
+})
+// output: good error: ReferenceError: greeter is not defined
+
+const greeter = (string) => {
+    return `"Hello ${greeter}"`
+}
+// Output: pass
+
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
 // Create the function that will make the test pass.
+
+describe("oddOrEven", () => {
+    it("takes a number as an argument and logs whether the number is odd or even", () => {
+        expect(oddOrEven(5)).toEqual("odd")
+        expect(oddOrEven(4)).toEqual("even")
+    })
+})
+// Output: good error: ReferenceError: oddOrEven is not defined
+
+const oddOrEven = (number) => {
+    if (number % 2 !== 0) {
+        return "odd"
+    } else if (number % 2 == 0){
+        return "even"
+    } 
+}
+//Output: pass
+
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
 // Create the function that will make the test pass.
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
