@@ -61,9 +61,24 @@ const areYouStressed = (string) => {
 
 // Write the test for a function that returns "in budget" if a price is lower than $300.
 
-
+describe("inBudget", () => {
+  it("returns 'it is in budget' if it is less that $300 , 'not in budget' if it is greater than $300", () => {
+    expect(inBudget(300)).toEqual("it is in budget")
+    expect(inBudget(301)).toEqual("not in budget")
+  })
+})
 
 // Create the function that will make the test pass.
+
+const inBudget = (number) => {
+  if(number <= 300) {
+    return "it is in budget"
+  } else if(number > 300) {
+    return "not in budget"
+  } else {
+    return "you're brokeneth"
+  }
+}
 
 
 // Write the test for a function that takes in two numbers and returns the smaller number.
