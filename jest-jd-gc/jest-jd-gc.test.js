@@ -234,45 +234,74 @@ const greeter = (name) => {
 // 9. Write the test for a function called `oddOrEven` that takes a number as an
 // argument and logs whether the number is odd or even.
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("oddOrEven", () => {
+  it("returns whether the number is odd or even.", () => {
+    expect(oddOrEven(33)).toEqual("odd");
+    expect(oddOrEven(20)).toEqual("even");
+  });
+});
+
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+
+//create functions that will make the test pass
+const oddOrEven = (number) => {
+  // if the number is odd
+  if (number % 2 !== 0) {
+    // return "odd"
+    return "odd";
+    // else return even
+  } else {
+    return "even";
+  }
+};
 
 //==============================================================================
 //==============================================================================
 // 10. Write the test for a function called `doubler` that takes a number and
 // returns the result of the number multiplied by 2.
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("doubler", () => {
+  it("takes a number and returns the result of the number multiplied by 2.", () => {
+    expect(doubler(33)).toEqual(66);
+    expect(doubler(1)).toEqual(2);
+  });
+});
+
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+
+//create functions that will make the test pass
+const doubler = (number) => {
+  // multiply number by 2
+  return number * 2;
+};
 
 //==============================================================================
 //==============================================================================
 // 11. Write the test for a function called `multiply` that takes two numbers as
 // arguments and logs the result of one of the numbers multiplied by the other.
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("multiply", () => {
+  it("takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.", () => {
+    expect(multiply(2, 3)).toEqual(6);
+    expect(multiply(12, 4)).toEqual(48);
+  });
+});
+
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+//   * Create the function that will make the test pass.
+const multiply = (num1, num2) => {
+  // multiply num1 by num2
+  return num1 * num2;
+};
 
 //==============================================================================
 //==============================================================================
@@ -280,15 +309,32 @@ const greeter = (name) => {
 // as arguments and returns whether the first number is evenly divisible by the
 // second so that `divisibleBy(10, 5)` logs "10 is evenly divisible by 5".
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("divisibleBy", () => {
+  it("returns whether the first number is evenly divisible by the second", () => {
+    expect(divisibleBy(10, 5)).toEqual("10 is evenly divisible by 5");
+    expect(divisibleBy(4, 3)).toEqual("4 is NOT evenly divisible by 3");
+    expect(divisibleBy(3, 5)).toEqual(undefined);
+  });
+});
+
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+//   * Create the function that will make the test pass.
+const divisibleBy = (num1, num2) => {
+  // number one is greater than number two then proceed
+  if (num1 > num2) {
+    // if num1 is evenly divisible by num2 then..
+    if (num1 % num2 === 0) {
+      // return that its evenly divisible by number 2
+      return `${num1} is evenly divisible by ${num2}`;
+      // else return that it is NOT evenly divisible by number2
+    } else {
+      return `${num1} is NOT evenly divisible by ${num2}`;
+    }
+  }
+};
 
 //==============================================================================
 //==============================================================================
@@ -297,14 +343,33 @@ const greeter = (name) => {
 // five, replace it with the word "buzz". If a number is a multiple of both 3
 // and 5, replace it with "fizzbuzz".
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("fizzbuzz", () => {
+  it("return 'fizz', 'buzz', or 'fizzbuzz' depending on the number", () => {
+    expect(fizzbuzz(3)).toEqual("fizz");
+    expect(fizzbuzz(15)).toEqual("fizzbuzz");
+    expect(fizzbuzz(10)).toEqual("buzz");
+  });
+});
+
 //------------------------------------------------------------------------------
 // * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+//   * Create the function that will make the test pass.
+const fizzbuzz = (number) => {
+  // if the number is divisible by three and 5 then then...
+  if (number % 5 === 0 && number % 3 === 0) {
+    // return 'fizzbuzz'
+    return "fizzbuzz";
+    //else if the number is divisible by five then...
+  } else if (number % 5 === 0) {
+    //return 'buzz'
+    return "buzz";
+    // else if the number is divisible by three then...
+  } else if (number % 3 === 0) {
+    //return 'fizz'
+    return "fizz";
+  }
+};
 
 //==============================================================================
