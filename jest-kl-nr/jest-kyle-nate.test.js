@@ -48,24 +48,61 @@ const ifStressed = (string) => {
 
 describe("inBudget", () => {
     it("returns 'in budget' if a price is lower than $300.", () => {
-        expect(inBudget("yes")).toBeLessThanOrEqual(300).toEqual("in budget")
+        expect(inBudget(299)).toEqual("in budget")
+        expect(inBudget(301)).toEqual("not in budget")
     })
 })
 //Output - good error: ReferenceError: inBudget is not defined
 
-const inBudget = (inBudget) => {
-    if(inBudget > 300) {
+const inBudget = (value) => {
+    if(value < 300) {
         return "in budget"
-    } else if(inBudget < 300) {
+    } else if(value >= 300) {
         return "not in budget"
     } else {
         return "error"
     }
 }
+
+//output: pass 
 // Write the test for a function that takes in two numbers and returns the smaller number.
 // Create the function that will make the test pass.
+
+describe("smallNum", () => {
+    it("takes in two numbers and returns the smaller number", () => {
+        expect(smallNum(10,5)).toEqual(5)
+       
+    })
+})
+//output: good error smallNum is not defined
+
+const smallNum = (num1, num2) => {
+    if(num1 >= num2) {
+        return num2
+    } else {
+        return num1
+    }
+    }
+
+//output: pass
+
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
+
+describe("oddNum", () => {
+    it("that takes in one numbers and returns whether the number is odd" , () => {
+        expect(oddNum(5)).toEqual("odd")
+    })
+})
+//output: oddNums not defined good error
+
+const oddNum = (number) => {
+    if(number % 2 !== 0) {
+        return "odd"
+    } else {
+        return "even"
+    }
+}
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Create the function that will make the test pass.
 // Write the test for a function called rick that returns "Morty".
