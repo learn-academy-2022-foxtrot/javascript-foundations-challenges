@@ -5,7 +5,7 @@
 /*
 ------------- TEST TEMPLATE -------------
 describe("", () => {
-  it("", () => {
+  it(``, () => {
     expect().toEqual()
   })
 })
@@ -42,82 +42,124 @@ Steps:
 
 describe("areYouTired", () => {
   it("returns drink coffee if you are tired and keep working if you are not tired.", () => {
-    let isTired = "yes"
-    let notTired = "no"
-    let result1 = "drink coffee"
-    let result2 = "keep working"
-    expect(areYouTired(isTired)).toEqual(result1)
-    expect(areYouTired(notTired)).toEqual(result2)
-  })
-})
+    let isTired = "yes";
+    let notTired = "no";
+    let result1 = "drink coffee";
+    let result2 = "keep working";
+    expect(areYouTired(isTired)).toEqual(result1);
+    expect(areYouTired(notTired)).toEqual(result2);
+  });
+});
 
 const areYouTired = (string) => {
-  if(string === "yes"){
-  return "drink coffee" 
-} else if (string === "no") {
-  return "keep working" 
-} else {
-  return "Error"
-}
-}
+  if (string === "yes") {
+    return "drink coffee";
+  } else if (string === "no") {
+    return "keep working";
+  } else {
+    return "Error";
+  }
+};
 
 // 2. Write the test for a function that returns "relax" if you are stressed and "keep going" if you are not stressed.
 // Create the function that will make the test pass.
 
 describe("areYouStressed", () => {
   it(`returns "relax" if you are stressed and "keep going" if you are not stressed.`, () => {
-    let notStressed = "no"
-    let isStressed = "yes"
-    let result1 = "keep going"
-    let result2 = "relax"
-    expect(areYouStressed(notStressed)).toEqual(result1)
-    expect(areYouStressed(isStressed)).toEqual(result2)
-  })
-})
+    let notStressed = "no";
+    let isStressed = "yes";
+    let result1 = "keep going";
+    let result2 = "relax";
+    expect(areYouStressed(notStressed)).toEqual(result1);
+    expect(areYouStressed(isStressed)).toEqual(result2);
+  });
+});
 
 const areYouStressed = (string) => {
-  if(string === "yes") {
-    return "relax"
+  if (string === "yes") {
+    return "relax";
   } else if (string === "no") {
-    return "keep going"
+    return "keep going";
   } else {
-    return "Error"
+    return "Error";
   }
-}
+};
 
 // 3. Write the test for a function that returns "in budget" if a price is lower than $300.
 // Create the function that will make the test pass.
 
 describe("budgetCheck", () => {
   it(`returns "in budget" if a price is lower than $300.`, () => {
-    let price1 = 200
-    let price2 = 300
-    let price3 = 400
-    result1 = "in budget"
-    result2 = "out of budget"
-    expect(budgetCheck(price1)).toEqual(result1)
-    expect(budgetCheck(price2)).toEqual(result1)
-    expect(budgetCheck(price3)).toEqual(result2)
-  })
-})
+    let price1 = 200;
+    let price2 = 300;
+    let price3 = 400;
+    result1 = "in budget";
+    result2 = "out of budget";
+    expect(budgetCheck(price1)).toEqual(result1);
+    expect(budgetCheck(price2)).toEqual(result1);
+    expect(budgetCheck(price3)).toEqual(result2);
+  });
+});
 
 const budgetCheck = (number) => {
-  if(number <= 300) {
-    return "in budget"
+  if (number <= 300) {
+    return "in budget";
   } else if (number > 300) {
-    return "out of budget" 
+    return "out of budget";
   } else {
-    return "Error"
+    return "Error";
   }
-}
+};
 
 // 4. Write the test for a function that takes in two numbers and returns the smaller number.
 // Create the function that will make the test pass.
 
+describe("smallerNumber", () => {
+  it(`Takes in two numbers and returns the smaller number`, () => {
+    expect(smallerNumber(5, 10)).toEqual("is smaller");
+    expect(smallerNumber(10, 5)).toEqual("is larger");
+    expect(smallerNumber(10, 10)).toEqual("is the same");
+  });
+});
 
+const smallerNumber = (num1, num2) => {
+  if (num1 > num2) {
+    return "is larger";
+  } else if (num2 > num1) {
+    return "is smaller";
+  } else if (num1 === num2) {
+    return "is the same";
+  } else {
+    return "Error";
+  }
+};
+
+console.log(smallerNumber(5, 10));
 
 // 5. Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
+
+describe("oddFinder", () => {
+  it(`Takes in one number and returns whether the number is odd.`, () => {
+    let number1 = 10;
+    let number2 = 5;
+    let result1 = "even";
+    let result2 = "odd";
+
+    expect(oddFinder(number1)).toEqual(result1);
+    expect(oddFinder(number2)).toEqual(result2);
+  });
+});
+
+const oddFinder = (number) => {
+  if (number % 2 !== 0) {
+    return "odd";
+  } else if (number % 2 === 0) {
+    return "even";
+  } else {
+    return "Error";
+  }
+};
 
 // 6. Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Create the function that will make the test pass.
