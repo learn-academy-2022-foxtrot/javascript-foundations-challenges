@@ -242,24 +242,166 @@
         // Write the test for a function called rick that returns "Morty".
         // Create the function that will make the test pass.
 
+        //input 1: 
+        //output 1: "Morty"
+       
+
+        // Pseudocode
+        // create a function called rick that returns "Morty".
+                // return "Morty"
+            
+                describe("rick", () => {
+                    it("test for a function called rick that returns 'Morty'", () => {
+                    expect(rick()).toEqual("Morty")
+                    })
+                })
+
+            //GOOD FAIL! YAY!
+
+        const rick = () => {
+            return "Morty"
+        }
 
         // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+
+
+        //input 1: "Name"
+        //output 1: 'Hello Name!'
+       
+
+        // Pseudocode
+        // create a function called called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+
+            // one parameter: "name"
+            // Takes name and adds to string 
+                // return "Hello name!'
+            
+            
+                describe("greeter", () => {
+                    it("takes a name as an argument and returns a greeting with that name to the screen.", () => {
+                    expect(greeter("Michy")).toEqual('Hello ${name}!')
+                
+                    })
+                })
+                //GOOD FAIL! YAY! 
+
         // Create the function that will make the test pass.
 
+                const greeter = (name) => {
+                    return 'Hello ${name}!'
+                }
 
         // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+
+        //input 1: 3
+            //output 1: "odd"
+            // input 2: 2
+            // output 2: "even"
+
+            // Pseudocode
+            // create a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+                // one parameter: number
+                // Write a conditional to evaluate if number is odd using modulo
+                    // return "odd"
+                // Otherwise evaluate if number is not odd
+                    // return "even"
+                
+                    describe("oddOrEven", () => {
+                        it("takes in one numbers and returns whether the number is odd.", () => {
+                        expect(oddOrEven(3)).toEqual("odd")
+                        expect(oddOrEven(2)).toEqual("even")
+                        })
+                    })
+
+                    //GOOD FAIL! YAY!
+
         // Create the function that will make the test pass.
 
+        const  oddOrEven = (number) => {
+            if(number % 2 !== 0) {
+                return "odd"
+            } else {
+                return "even"
+            }
+        }
 
         // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
         // Create the function that will make the test pass.
 
+            //input 1: 3 
+            //output 1: 6
+            // input 2: 2
+            // output 2: 4
+
+            // Pseudocode
+            // create a function called  doubler that takes a number and returns the result of the number multiplied by 2.
+       
+                // one parameter: number
+                // Write a conditional to take number and multiply by 2
+                    // return number * 2
+                
+                    describe("doubler", () => {
+                        it(" doubler that takes a number and returns the result of the number multiplied by 2.", () => {
+                        expect(doubler(3)).toEqual(6)
+                        expect(doubler(2)).toEqual(4)
+                        })
+                    })
+
+                    //GOOD FAIL YAY! 
+            // Create the function that will make the test pass.
+                    const doubler = (number) =>{
+                        return number * 2
+                    }
+
 
         // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+
+            //input 1: 3, 2 
+            //output 1: 6
+            // input 2: 3, 5
+            // output 2: 15
+
+            // Pseudocode
+            // create a function multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+                // two parameters: number1, number2
+                // Multiply number1 by number2
+                    // return number1 * number2
+                
+                    describe("multiply", () => {
+                        it(" multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.", () => {
+                        expect(multiply(3,2)).toEqual(6)
+                        expect(multiply(3,5)).toEqual(15)
+                        })
+                    })
+                    //GOOD FAIL YAY! 
+
         // Create the function that will make the test pass.
 
+                    const multiply = (number1, number2) => {
+                        return number1 * number2
+                    }
 
         // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+            
+            //input 1: 10,5  
+            //output 1: "10 is divisable by 5"
+            //input 2: 11, 5
+            //output 2: 11 is NOT divisable by 5"
+
+            // Pseudocode
+            // create a function divisableBy that takes takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+                // two parameters: number1, number2
+                // Write a conditional that evaluates if number1 is evenly divisable by number2 using modulo
+                    // ret
+                
+                    describe("multiply", () => {
+                        it(" multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.", () => {
+                        expect(multiply(3,2)).toEqual(6)
+                        expect(multiply(3,5)).toEqual(15)
+                        })
+                    })
+                    //GOOD FAIL YAY! 
+
         // Create the function that will make the test pass.
 
 
