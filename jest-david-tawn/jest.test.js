@@ -83,6 +83,38 @@ const inBudget = (number) => {
 
 // Write the test for a function that takes in two numbers and returns the smaller number.
 // Create the function that will make the test pass.
+
+// describe a function that takes two numbers
+// input: 2 numbers
+// output: smaller of the two
+
+// describe("", () => {
+//   it("", () => {
+//     expect().toEqual()
+//   })
+// })
+
+describe("smallerNumber", () => {
+  it("returns 'smaller number' if it is smallerNumber , 'larger number' if it is largerNumber", () => {
+    expect(smallerNumber(22, 78)).toEqual("22 is smaller than 78")
+    expect(smallerNumber(78, 22)).toEqual("78 is greater than 22")
+    expect(smallerNumber(22, 22)).toEqual("22 is the same as 22")
+  })
+})
+
+const smallerNumber = (number, num2) => {
+  if(number < num2) {
+    return `${number} is smaller than ${num2}`
+  } else if (number > num2) {
+    return `${number} is greater than ${num2}`
+  } else if (num2 === number) {
+    return `${number} is the same as ${num2}`
+  } else {
+    return "Something is brokeneth"
+  }
+  }
+    
+
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
