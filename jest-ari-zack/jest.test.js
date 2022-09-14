@@ -164,11 +164,49 @@ const oddFinder = (number) => {
 // 6. Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Create the function that will make the test pass.
 
+describe("fruitColor", () => {
+  it(`returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.`, () => {
+    let fruit1 = "banana"
+    let fruit2 = "apple"
+    let fruit3 = "grape"
+    let result1 = "yellow"
+    let result2 = "red"
+    let result3 = "purple"
+    expect(fruitColor(fruit1)).toEqual(result1)
+    expect(fruitColor(fruit2)).toEqual(result2)
+    expect(fruitColor(fruit3)).toEqual(result3)
+  })
+})
+
+const fruitColor = (fruit) => {
+  if(fruit === "banana") {
+    return "yellow"
+  } else if (fruit === "apple") {
+    return "red"
+  } else if (fruit === "grape") {
+    return "purple"
+  } else {
+    return "No fruit"
+  }
+}
+
 // 7. Write the test for a function called rick that returns "Morty".
 // Create the function that will make the test pass.
 
+describe("rick", () => {
+  it(`returns "Morty"`, () => {
+    expect(rick()).toEqual("Morty")
+  })
+})
+
+const rick = () => {
+  return "Morty"
+}
+
 // 8. Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
 // Create the function that will make the test pass.
+
+
 
 // 9. Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
 // Create the function that will make the test pass.
