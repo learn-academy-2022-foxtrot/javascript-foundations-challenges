@@ -97,7 +97,7 @@ const areYouinBudget = (number) => {
     return "in budget";
     // else ..
   } else {
-    // return null value
+    // return null cd ..
     return null;
   }
 };
@@ -107,15 +107,28 @@ const areYouinBudget = (number) => {
 // 4. Write the test for a function that takes in two numbers and returns the
 // smaller number.
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+
+describe("smallerNumber", () => {
+  it("returns the smaller number.", () => {
+    expect(smallerNumber(1, 2)).toEqual(1);
+    expect(smallerNumber(55, 65)).toEqual(55);
+  });
+});
+
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+// Create the function that will make the test pass
+const smallerNumber = (num1, num2) => {
+  // in number 1 us greeter than number 2..
+  if (num1 > num2) {
+    // return number 2
+    return num2;
+    // else return number 1
+  } else {
+    return num1;
+  }
+};
 
 //==============================================================================
 //==============================================================================
