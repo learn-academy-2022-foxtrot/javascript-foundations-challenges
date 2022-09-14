@@ -22,12 +22,20 @@ describe("areYouTired", () => {
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+
+// create function that will be tested
 const areYouTired = (answer) => {
+  // if answer is yes then..
   if (answer.toLowerCase() === "yes") {
+    // "drink coffee"
     return "drink coffee";
+    // else if answer is no then..
   } else if (answer.toLowerCase() === "no") {
+    // "keep working"
     return "keep working";
+    // else
   } else {
+    // error
     return "Error, wrong input";
   }
 };
@@ -37,23 +45,45 @@ const areYouTired = (answer) => {
 // 2.  Write the test for a function that returns "relax" if you are stressed
 // and "keep going" if you are not stressed.
 //==============================================================================
-// describe("testName", () => {
-//   it("describe the test", () => {
-//     expect(function(inputVariable1)).toEqual("expected result 1")
-//     expect(function(inputVariable2)).toEqual("expected result 3")
-//   })
-// })
+describe("areYouStressed", () => {
+  it("returns 'relax' if you are stressed and 'keep going' if you are not stressed.", () => {
+    expect(areYouStressed("yes")).toEqual("relax");
+    expect(areYouStressed("no")).toEqual("keep going");
+  });
+});
 
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
+
+// create function that will be tested
+const areYouStressed = (answer) => {
+  // if answer is yes then..
+  if (answer.toLowerCase() === "yes") {
+    // "relax"
+    return "relax";
+    // else if answer is no then..
+  } else if (answer.toLowerCase() === "no") {
+    // "keep going"
+    return "keep going";
+    // else
+  } else {
+    // error
+    return "Error, wrong input";
+  }
+};
 
 //==============================================================================
 //==============================================================================
 // 3. Write the test for a function that returns "in budget" if a price is lower
 // than $300.
 //==============================================================================
-
+// describe("testName", () => {
+//   it("describe the test", () => {
+//     expect(function(inputVariable1)).toEqual("expected result 1")
+//     expect(function(inputVariable2)).toEqual("expected result 3")
+//   })
+// })
 //------------------------------------------------------------------------------
 //   * Create the function that will make the test pass.
 //------------------------------------------------------------------------------
