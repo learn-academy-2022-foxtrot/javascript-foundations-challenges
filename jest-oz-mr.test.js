@@ -8,61 +8,68 @@
 
 // Write the test for a function that returns "drink coffee" if you are tired and "keep working" if you are not tired.
 // Create the function that will make the test pass.
-// describe("areYouTired", () => {
-//     it("returns drink coffee or keep working based on input", () => {
-//         expect(areYouTired("yes")).toEqual("drink coffee")
-//         expect(areYouTired("no")).toEqual("keep working")
-//     })
-// })
 
-// const areYouTired = (string) => {
-//     if (string.toLowerCase() === "yes") {
-//         return "drink coffee"
-//     }else if (string.toLowerCase() === "no") {
-//         return "keep working"
-//     }else {
-//         return "Error"
-//     }
-// }
+describe("areYouTired", () => {
+    it("returns drink coffee or keep working based on input", () => {
+        expect(areYouTired("yes")).toEqual("drink coffee")
+        expect(areYouTired("no")).toEqual("keep working")
+    })
+})
+
+const areYouTired = (string) => {
+    if (string.toLowerCase() === "yes") {
+        return "drink coffee"
+    }else if (string.toLowerCase() === "no") {
+        return "keep working"
+    }else {
+        return "Error"
+    }
+}
 
 // Write the test for a function that returns "relax" if you are stressed and "keep going" if you are not stressed.
 // Create the function that will make the test pass.
 
-// describe("areYouStressed", () => {
-//     it("returns relax or keep going based on input", () => {
-//         expect(areYouStressed("yes")).toEqual("relax")
-//         expect(areYouStressed("no")).toEqual("keep going")
-//     })
-// })
-
-// const areYouStressed= (string) => {
-//     if (string.toLowerCase() === "yes") {
-//         return "relax"
-//     }else if (string.toLowerCase() === "no") {
-//         return "keep going"
-//     }else {
-//         return "Error"
-//     }
-// }
-
-//Write the test for a function that returns "in budget" if a price is lower than $300.
-//Create the function that will make the test pass.
-const budgetLimit = 299
-describe("spendingMoney", () => {
-    it("returns in budget if a price is lower than $300", () => {
-        expect(spendingMoney (budgetLimit)).toEqual("in budget")
+describe("areYouStressed", () => {
+    it("returns relax or keep going based on input", () => {
+        expect(areYouStressed("yes")).toEqual("relax")
+        expect(areYouStressed("no")).toEqual("keep going")
     })
 })
 
-const spendingMoney = (string) => {
-    if (string <= budgetLimit) {
+const areYouStressed= (string) => {
+    if (string.toLowerCase() === "yes") {
+        return "relax"
+    }else if (string.toLowerCase() === "no") {
+        return "keep going"
+    }else {
+        return "Error"
+    }
+}
+
+//Write the test for a function that returns "in budget" if a price is lower than $300.
+//Create the function that will make the test pass.
+
+describe("spendingMoney", () => {
+    it("returns in budget if a price is lower than $300", () => {
+        expect(spendingMoney(299)).toEqual("in budget")
+        expect(spendingMoney(400)).toEqual("not in budget")
+    })
+})
+
+const spendingMoney = (num) => {
+    if (num < 300) {
         return "in budget"
-    } else {
-        return "too expensive"
+    } else if (num > 300) {
+        return "not in budget"
     }
 }
 // Write the test for a function that takes in two numbers and returns the smaller number.
 // Create the function that will make the test pass.
+    describe("littleNum", () => {
+        it("returns a the smallest number between two numbers", () => {
+            expect(littleNum(a, b)).toEqual()
+        })
+    })
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
 // Create the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
