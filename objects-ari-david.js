@@ -1,32 +1,75 @@
 // 1. Consider this variable:
 
-// const person = {
-//   firstName: "Arthur",
-//   lastName: "Dent"
-// }
+const person = {
+   firstName: "Arthur",
+   lastName: "Dent",
+   homePlanet: "Earth",
+   getInfo: function () {
+    return `${this.firstName} ${this.lastName} is from ${this.homePlanet}`  
+   } 
+ }
+ 
 // Write the code that accesses the first name of the person object.
+
+// console.log(person.firstName)
+
 // Write the code that accesses the last name of the person object.
+
+// console.log(person.lastName)
+
 // Write the code that gives the person object a property of homePlanet and set it to 'Earth'.
+
+// person.homePlanet = "Earth"
+// console.log(person)
+
 // Update the person object with a method that logs "Arthur Dent is from planet Earth".
+// console.log(person.getInfo())
+
+
 // Consider this variable:
 
-// const product = {
-//   name: "chair",
-//   price: 24.99
-// }
+
+ const product = {
+   name: "chair",
+   price: 24.99
+ }
 // Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+
+const describeProduct = (object) => {
+  return `This product is a ${object.name}. It costs ${object.price} `
+}
+// console.log(describeProduct(product))
+
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
 
-// 2. Consider this variable:
+const totalWithTax = (object) => {
+  let price = (object.price * 1.07).toFixed(2)
+  // console.log(price)
+  return `The price including tax equals ${price}`
+}
+// console.log(totalWithTax(product))
 
-// const lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+//  2. Consider this variable:
+
+const lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"]
+}
 // Write the code that accesses the ingredients property.
+
+// console.log(lunch.ingredients)
+
 // Write the code that access the third ingredient of the lunch object.
+
+// console.log(lunch.ingredients[2])
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+const sandwich = (object) => {
+  return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients[0]}, ${object.ingredients[1]}, and ${object.ingredients[2]}.`
+}
+console.log(sandwich(lunch))
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 
 // 3. Consider this variable:
