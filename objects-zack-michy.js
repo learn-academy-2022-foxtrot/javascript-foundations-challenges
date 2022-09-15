@@ -35,12 +35,33 @@
 // console.log(product.description)
 
 // Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7 % sales tax rounded to two decimals.
-const product = {
-  name: "chair",
-  price: 24.99,
-  description: "The product is a chair. It costs $24.99"
+
+// const product = {
+//   name: "chair",
+//   price: 24.99,
+//   description: "The product is a chair. It costs $24.99"
+// }
+// const totalWithTax = (productArgument) => {
+//   return (productArgument.price * 1.07).toFixed(2)
+// }
+// console.log(totalWithTax(product))
+
+const lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"]
 }
-const totalWithTax = (productArgument) => {
-  return productArgument.price * 7 % 2
-}
-console.log(totalWithTax(product))
+
+// Write the code that accesses the ingredients property.
+
+
+
+// Write the code that access the third ingredient of the lunch object.
+
+
+
+// Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+
+
+// Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
