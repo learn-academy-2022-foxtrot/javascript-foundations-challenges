@@ -60,9 +60,24 @@ const lunch = {
   ingredients: ["bread", "peanut butter", "banana"]
 }
 // Write the code that accesses the ingredients property.
+console.log(lunch.ingredients)
+
 // Write the code that access the third ingredient of the lunch object.
+console.log(lunch.ingredients[2])
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+const announceIngredients = (obj) => {
+  let name = obj.name
+  let type = obj.type
+  let ingredients = obj.ingredients
+
+  return `the ingredients for a ${name} ${type} ${ingredients[0]}, ${ingredients[1]}, ${ingredients[2]}.`
+}
+console.log(announceIngredients(lunch))
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+
 // Consider this variable:
 
 const animals = [
@@ -72,8 +87,30 @@ const animals = [
   { name: "Hank", type: "cat", age: 11 }
 ]
 // Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
+const getCats = (creatures) => {
+  return creatures.filter((animal) => animal.type === "cat")
+}
+console.log(getCats(animals))
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
+const getNames = (creatures) => {
+  let animalNames = []
+  for (i=0; i<creatures.length; i++){
+    animalNames.push(creatures[i].name)
+  }
+  return animalNames
+}
+console.log(getNames(animals))
+
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
+const getOlderAnimals = (creatures) => {
+  let over10 = []
+  oldFilter = creatures.filter((value) => value.age >=10)
+  for (let i=0; i<creatures.length; i++){
+   over10.push(oldFilter[i.name])
+ }
+  return over10
+}
+console.log(getOlderAnimals(animals))
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
 // Consider this variable:
 
