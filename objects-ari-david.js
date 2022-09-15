@@ -124,11 +124,13 @@ const petAges = (array) => {
 // create a sentence for each pet
 
 const animalDescribe = (array) => {
-  array.filter((value) => {
-    console.log(
+  let animalInfo = [];
+  array.map((value) => {
+    animalInfo.push(
       `${value.name} is a ${value.type}, and is ${value.age} years old.`
     );
   });
+  return animalInfo;
 };
 
 // let petInfo = animalDescribe(animals);
@@ -184,3 +186,26 @@ console.log(animalDescribe(animals));
 // Write the code that uses destructuring to log the name of your cohort.
 // Create a function that takes an object like the one above and returns an array with a string of every cohort name and year.
 // // output: ["2021 Alpha", "2021 Bravo", "2021 Charlie", "2021 Delta", "2021 Echo", "2022 Alpha", "2022 Bravo", "2022 Charlie", "2022 Delta", "2022 Echo", "2022 Foxtrot", "2022 Golf"]
+
+/* Hey guys! HOF's are KILLING me, could I get another pair of eyes on this? I'll include the prompt, the array, and my current code below.
+I can get it to return with a console log, but I cannot manage to remember out how to phrase the return to make it assign these to a new array. Thanks in advance!
+
+// Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
+
+const animals = [
+  { name: "Waffles", type: "dog", age: 7 },
+  { name: "Fluffy", type: "cat", age: 14 },
+  { name: "Spelunky", type: "dog", age: 4 },
+  { name: "Hank", type: "cat", age: 11 },
+]
+
+const animalDescribe = (array) => {
+  array.filter((value) => {
+    console.log(
+      `${value.name} is a ${value.type}, and is ${value.age} years old.`
+    );
+  });
+};
+
+console.log(animalDescribe(animals))
+*/
