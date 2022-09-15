@@ -109,14 +109,18 @@ const petAges = (array) => {
     }
   }
   return petName;
-
-  // return array.filter((element) => {
-  //   if (element.age > 10) {
-  //     console.log(element.name);
-  //     return element.name;
-  //   }
-  // });
 };
+
+const petAges2 = (array) => {
+  let petName = [];
+  array.filter((value) => {
+    if (value.age > 10) {
+      petName.push(value.name);
+    }
+  });
+  return petName;
+};
+console.log(petAges2(animals));
 // console.log("lookhere", petAges(animals));
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
 
@@ -135,7 +139,7 @@ const animalDescribe = (array) => {
 
 // let petInfo = animalDescribe(animals);
 // console.log(petInfo);
-console.log(animalDescribe(animals));
+// console.log(animalDescribe(animals));
 
 // 4. Consider this variable:
 
