@@ -8,6 +8,7 @@ const person = {
 // }  
 }
 
+
 // Write the code that accesses the first name of the person object.
 console.log(person.firstName)
 
