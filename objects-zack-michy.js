@@ -46,22 +46,36 @@
 // }
 // console.log(totalWithTax(product))
 
-const lunch = {
-  name: "PB and Banana",
-  type: "sandwich",
-  ingredients: ["bread", "peanut butter", "banana"]
-}
+// const lunch = {
+//   name: "PB and Banana",
+//   type: "sandwich",
+//   ingredients: ["bread", "peanut butter", "banana"]
+// }
 
 // Write the code that accesses the ingredients property.
-
+// console.log(lunch.ingredients)
 
 
 // Write the code that access the third ingredient of the lunch object.
-
+// console.log(lunch.ingredients[2])
 
 
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
-
+const lunchFunction = (lunchObject) => {
+  let output = `The ingredients for a ${lunchObject.name} ${lunchObject.type} are ${lunchObject.ingredients}`
+  return output 
+}
+// console.log(lunchFunction(lunch))
 
 
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+const lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"],
+  addUp: function() {
+    return `The ingredients for a ${lunchObject.name} ${lunchObject.type} are ${lunchObject.ingredients}`
+  }
+}
+
