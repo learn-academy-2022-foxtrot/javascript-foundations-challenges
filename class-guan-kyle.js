@@ -68,7 +68,34 @@ latte = new Latte ("Hazelnut", "Almond milk", 10, 2)
 console.log(latte.latteProfile())
 // Log the double shot, hazelnut latte with almond milk's profile.
 
+
+class Cylinder {
+  constructor(height,radius){
+    this.height = height
+    this.radius = radius
+  }
+  cylVolume (){
+    const roundVol = ((3.14) * this.radius * 2 * this.height).toFixed(4)
+    return roundVol
+  }
+}
 // Volume of a Cylinder: create a class for Cylinder
+
+let cylinder = new Cylinder(4.2,6.9)
+console.log(cylinder.cylVolume())
 // Write a class that calculates the volume of a Cylinder: v = πr2h (r is the radius and h is the height of the cylinder)
+
+cylinder = new Cylinder(6.9,4.21)
+console.log(cylinder.cylVolume())
 // Write the code that rounds the volume of the cylinder to four decimal places
+
+console.log(cylinder.cylVolume())
+
+
 // Write the code that creates three unique cylinder objects
+
+let newCylinder = new Cylinder(3,4)
+let newCylinder1 = new Cylinder(5,6)
+let newCylinder2 = new Cylinder(8,7)
+
+console.log(newCylinder,newCylinder1,newCylinder2)
