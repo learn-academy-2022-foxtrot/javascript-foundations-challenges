@@ -3,11 +3,13 @@ const { arrayBuffer } = require("stream/consumers")
 
 const person = {
   firstName: "Arthur",
-  lastName: "Dent"
+  lastName: "Dent",
+  locatePer: function () {
+    return ` ${this.firstName} ${this.lastName} is a ${this.sex} from ${this.homePlanet}`
+  }
 }
 
 //   Write the code that accesses the first name of the person object.
-
 console.log(person.firstName)
 
 // Write the code that accesses the last name of the person object.
@@ -17,16 +19,24 @@ console.log(person.lastName)
 // Write the code that gives the person object a property of homePlanet and set it to 'Earth'.
 
 person.homePlanet = 'Earth'
+person.sex = 'Male'
 
 console.log(person)
 
 // Update the person object with a method that logs "Arthur Dent is from planet Earth".
 
-person.locatePer = function () {
-  return ` ${this.firstName} ${this.lastName} is from ${this.homePlanet}`
-}
+// This function can be added directly to the object as a "method"
+// getData: function () {
+  // return ` ${this.firstName} ${this.lastName} is a ${this.sex} from ${this.homePlanet}`}
+// }
+
+// Another way of doing it: 
+// person.locatePer = function () {
+//   return ` ${this.firstName} ${this.lastName} is a ${this.sex} from ${this.homePlanet}`
+// }
 
 console.log(person.locatePer())
+console.log(person)
 
 const product = {
   name: "chair",
@@ -40,13 +50,21 @@ const discribeProduct = (obj) => {
 }
 console.log(discribeProduct(product))
 
-// Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
+// Write a function called totalWithTax 
+// Input: product object as an argument 
+// Output: the total price of the chair that includes a 7% sales tax rounded to two decimals.
 
 const totalWithTax = (obj) => {
   taxNum = obj.price * 1.07
   roundNum = taxNum.toFixed(2)
   return roundNum
 }
+
+// const totalWithTax = (obj) => {
+//   taxNum = obj.price * 1.07
+//   roundNum = taxNum.toFixed(2)
+//   return roundNum
+// }
 
 console.log(totalWithTax(product))
 
@@ -62,13 +80,18 @@ console.log(lunch.ingredients)
 
 // Write the code that access the third ingredient of the lunch object.
 
+
 console.log(lunch.ingredients[2])
 
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 
 const lunchString = (obj) => {
-  return `The ingredients ${obj.name} ${obj.type} are ${obj.ingredients.join(", ")}.`
+  return `"The ingredients of ${obj.name} ${obj.type} are ${obj.ingredients.join(", ")}"`
 }
+
+// const lunchString = (obj) => {
+//   return `The ingredients ${obj.name} ${obj.type} are ${obj.ingredients.join(", ")}.`
+// }
 
 console.log(lunchString(lunch))
 
@@ -82,21 +105,27 @@ const animals = [
 ]
 //   Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
 
-// const animalName = (arr) => {
-//     catFilt = arr.filter((val) => val.type === 'cat')
-//     return catFilt
-// }
+const animalName = (arr) => {
+    catFilt = arr.filter((val) => val.type === 'cat')
+    return catFilt
+}
 
-// console.log(animalName(animals))
+console.log(animalName(animals))
 
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
+
+const petNames = (petArray) => {
+  return petArray.map(element => {
+    return element.name
+  })
+}
 
 // const petNames = (petArray) => {
 //   return petArray.map(element => {
 //       return element.name
 //   })
 // }
-// console.log(petNames(animals))
+console.log(petNames(animals))
 
 
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
@@ -152,11 +181,13 @@ const author = {
   genre: "science fiction"
 }
 
+const { name, genre } = author
+
 // Write the code that destructures the author object so that the following code snippet will run successfully:
-// console.log(`${name} is a ${genre} author`)
+console.log(`${name} is a ${genre} author`)
 // // output: "H. G. Wells is a science fiction author"
 
-console.log(`${author.name} is a ${author.genre} author`)
+// console.log(`${author.name} is a ${author.genre} author`)
 
 const pokeOne = {
   species: "Charmandar",
@@ -175,8 +206,13 @@ const pokeTwo = {
 // console.log(describePokemon(pokeTwo))
 // // output: "Magikarp is a Water pokemon"
 
+// const describePokemon = (obj) => {
+//   return `${obj.species} is a ${obj.pokemon_type} pokemon`
+// }
+
 const describePokemon = (obj) => {
-  return `${obj.species} is a ${obj.pokemon_type} pokemon`
+  let { species, pokemon_type } = obj
+  return `${species} is a ${pokemon_type} pokemon`
 }
 
 console.log(describePokemon(pokeOne))
@@ -190,6 +226,7 @@ const triangleDimensions = {
     return (this.base * this.height)/2
   }
 }
+
 
 // Modify the triangleDimensions object to have a method that returns the area of the triangle.
 console.log(triangleDimensions.areaTri())
@@ -208,6 +245,8 @@ const learn = {
 }
 
 // Write the code that logs the name of your cohort.
+
+
 console.log(learn.cohorts[2022][5])
 // Write the code that uses destructuring to log the name of your cohort.
 
