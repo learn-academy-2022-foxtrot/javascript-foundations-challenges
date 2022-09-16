@@ -9,21 +9,22 @@ Step 3:
 Step 4:
 */
 
-const person = {
-    firstName: "Arthur",
-    lastName: "Dent",
-    homePlanet: "Earth",
-    addUp: function () {
-        return '${this.firstName, this.lastName} is from ${this.homePlanet}' 
-    }
-    //let homePlanet = { "earth"}
-    //--> "Arthur Dent is from planet Earth"
-  }
+// const person = {
+//     firstName: "Arthur",
+//     lastName: "Dent",
+//     homePlanet: "Earth", 
+//     addUp: function () {
+//         return `${this.firstName} ${this.lastName} is from ${this.homePlanet}`
+//     }
+// }
+//     //let homePlanet = { "earth"}
+//     //--> "Arthur Dent is from planet Earth"
+  
 
-  console.log(person.firstName)
-  console.log(person.lastName)
-  console.log(person.addUp())
-  //console.log()
+//   console.log(person.firstName)
+//   console.log(person.lastName)
+//   console.log(person.addUp())
+
 //   Write the code that accesses the first name of the person object.
 //   Write the code that accesses the last name of the person object.
 //   Write the code that gives the person object a property of homePlanet and set it to 'Earth'.
@@ -40,10 +41,21 @@ Step 3:
 Step 4:
 */
 
-// const product = {
-//     name: "chair",
-//     price: 24.99
-//   }
+const product = {
+    name: "chair",
+    price: 24.99,
+    total: 
+    addUp: function () {
+        return `The product is a ${this.name}. It cost $${this.price}.`
+    }, 
+    totalWithTax: function (){
+        return `The product is a ${this.name}. It cost $${this.price * .7}.`
+    }
+}
+
+console.log(product.totalWithTax())
+
+
 //   Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
 //   Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
 
@@ -143,3 +155,7 @@ Step 4:
 //   Modify the triangleDimensions object to have a method that returns the area of the triangle.
 //   Write the code that will update the base to be the value of 6.
   
+
+
+
+
